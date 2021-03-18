@@ -9655,5 +9655,97 @@ h3 {
     border-color: #dee2e6;
   }
 }
+body {
+  color: #656565;
+}
+
+main > div {
+  width: 200px;
+  margin: 20px;
+}
+main > div div.inner {
+  width: 200px;
+  height: 150px;
+  position: relative;
+}
+main > div > div:nth-child(2) {
+  height: 85px;
+  border-radius: 0 0 5px 5px;
+}
+main div.guide:nth-child(1) div.inner {
+  background-color: #ffc83f;
+}
+main div.guide:nth-child(1) > div:nth-child(2) {
+  border: solid 1px #ffc83f;
+}
+main div.guide:nth-child(1) div.detail div:nth-child(1) {
+  background-color: #df9f00;
+}
+main div.guide:nth-child(1) div.detail div:nth-child(2) {
+  background-color: #ffc83f;
+}
+main div.guide:nth-child(1) div.detail div:nth-child(3) {
+  background-color: #ffd979;
+}
+main div.guide:nth-child(2) div.inner {
+  background-color: #fa5e5b;
+}
+main div.guide:nth-child(2) > div:nth-child(2) {
+  border: solid 1px #fa5e5b;
+}
+main div.guide:nth-child(2) div.detail div:nth-child(1) {
+  background-color: #e80b07;
+}
+main div.guide:nth-child(2) div.detail div:nth-child(2) {
+  background-color: #fa5e5b;
+}
+main div.guide:nth-child(2) div.detail div:nth-child(3) {
+  background-color: #fc8e8c;
+}
+main div.guide:nth-child(3) div.inner {
+  background-color: #1d508d;
+}
+main div.guide:nth-child(3) > div:nth-child(2) {
+  border: solid 1px #1d508d;
+}
+main div.guide:nth-child(3) div.detail div:nth-child(1) {
+  background-color: #143863;
+}
+main div.guide:nth-child(3) div.detail div:nth-child(2) {
+  background-color: #1d508d;
+}
+main div.guide:nth-child(3) div.detail div:nth-child(3) {
+  background-color: #3a81d6;
+}
+main div.guide:nth-child(4) div.inner {
+  background-color: #684e79;
+}
+main div.guide:nth-child(4) > div:nth-child(2) {
+  border: solid 1px #684e79;
+}
+main div.guide:nth-child(4) div.detail div:nth-child(1) {
+  background-color: #493755;
+}
+main div.guide:nth-child(4) div.detail div:nth-child(2) {
+  background-color: #684e79;
+}
+main div.guide:nth-child(4) div.detail div:nth-child(3) {
+  background-color: #977baa;
+}
+main div.detail {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  main div.detail {
+    display: flex;
+    width: 200px;
+    height: 150px;
+    margin-top: 75px;
+  }
+  main div.detail div {
+    flex-basis: 33%;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
