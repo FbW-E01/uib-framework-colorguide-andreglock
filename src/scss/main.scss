@@ -1,3 +1,124 @@
+@use "sass:color";
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+@mixin card($color1, $color2, $color3, $color4) {
+    div.guide:nth-child(1) {
+        div.inner {
+            background-color: $color1;
+        }
+        > div:nth-child(2) {
+            border: solid 1px $color1;
+        }
+        div.detail {
+            div:nth-child(1) {
+                background-color: color.scale($color1, $lightness: -30%);
+            }
+            div:nth-child(2) {
+                background-color: $color1;
+            }
+            div:nth-child(3) {
+                background-color: color.scale($color1, $lightness: 30%);
+            }
+        }
+    }
+    div.guide:nth-child(2) {
+        div.inner {
+            background-color: $color2;
+        }
+        > div:nth-child(2) {
+            border: solid 1px $color2;
+        }
+        div.detail {
+            div:nth-child(1) {
+                background-color: color.scale($color2, $lightness: -30%);
+            }
+            div:nth-child(2) {
+                background-color: $color2;
+            }
+            div:nth-child(3) {
+                background-color: color.scale($color2, $lightness: 30%);
+            }
+        }
+    }
+    div.guide:nth-child(3) {
+        div.inner {
+            background-color: $color3;
+        }
+        > div:nth-child(2) {
+            border: solid 1px $color3;
+        }
+        div.detail {
+            div:nth-child(1) {
+                background-color: color.scale($color3, $lightness: -30%);
+            }
+            div:nth-child(2) {
+                background-color: $color3;
+            }
+            div:nth-child(3) {
+                background-color: color.scale($color3, $lightness: 30%);
+            }
+        }
+    }
+    div.guide:nth-child(4) {
+        div.inner {
+            background-color: $color4;
+        }
+        > div:nth-child(2) {
+            border: solid 1px $color4;
+        }
+        div.detail {
+            div:nth-child(1) {
+                background-color: color.scale($color4, $lightness: -30%);
+            }
+            div:nth-child(2) {
+                background-color: $color4;
+            }
+            div:nth-child(3) {
+                background-color: color.scale($color4, $lightness: 30%);
+            }
+        }
+    }
+}
+
+body {
+    color: #656565;
+}
+
+main {
+    > div {
+        width: 200px;
+        margin: 20px;
+
+        div.inner {
+            width: 200px;
+            height: 150px;
+            position: relative;
+        }
+
+        > div:nth-child(2) {
+            height: 85px;
+            border-radius: 0 0 5px 5px;
+        }
+    }
+    @include card(#ffc83f, #fa5e5b, #1d508d, #684e79);
+
+    div.detail {
+        display: none;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    main {
+        div.detail {
+            display: flex;
+            width: 200px;
+            height: 150px;
+            margin-top: 75px;
+
+            div {
+                flex-basis: 33%;
+            }
+        }
+    }
+}
